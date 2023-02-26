@@ -38,7 +38,7 @@ bool Dungeon::Battle(Character& player, Character& enemy)
 {
     while (!(player.IsDead() || enemy.IsDead()))
     {
-        if(Random::RangeInt(1, 6) % 2 == 0)
+        if(Random::Double() <= 0.5)
         {
             player.Attack(enemy);
         }
